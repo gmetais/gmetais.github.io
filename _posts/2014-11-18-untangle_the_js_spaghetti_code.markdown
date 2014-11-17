@@ -18,7 +18,7 @@ How to audit that? How to understand what’s going on on the page? In-browsers 
 Phantomas
 ---------
 
-I played a lot with [Phantomas (by Maciej Brencz)][Phantomas]. Do you know this tool? It’s great, it loads a page with PhantomJS (the headless browser), analyses many different aspects of the page and outputs metrics about performances and quality.
+I played a lot with <a target="_blank" href="https://github.com/macbre/phantomas">Phantomas (by Maciej Brencz)</a>. Do you know this tool? It’s great, it loads a page with PhantomJS (the headless browser), analyses many different aspects of the page and outputs metrics about performances and quality.
 
 ![phantomas]({{ site.url }}/assets/phantomas.jpg)
 
@@ -40,17 +40,17 @@ Yellow Lab Tools
 When *profiling* a webpage, there can be thousands of DOM interactions. It needed an HTML UI, and that's Yellow Lab Tools.
 
 
-When you launch a test (on aol.com for the next screenshot), you'll see a **timeline** that looks like this:
+When you launch a test (on www.aol.com for the next screenshot), you'll see a **timeline** that looks like this:
 
-![YellowLabTools timeline screenshot]({{ site.url }}/assets/YLTtimeline1.png)
+![YellowLabTools timeline screenshot]({{ site.url }}/assets/YLTtimeline1.jpg)
 
 This timeline shows the loading of the page. Each bar represents a bunch of Javascript interactions with the DOM.
 
-The page loaded in 4,932ms, but it looks like Javascript took half of this time! Don’t worry, there’s not 2.5 seconds of JS execution when you load aol.com on a real browser. It's 3 or 4 times faster. Spying some Javascript with some more Javascript necessarily slows down the execution.
+The page loaded in 4,932ms, but it looks like Javascript took half of this time! Don’t worry, there’s not 2.5 seconds of JS execution when you load www.aol.com on a real browser. It's 3 or 4 times faster. Spying some Javascript with some more Javascript necessarily slows down the execution.
 
 So what can we see on this timeline?
 
-![YellowLabTools timeline explainations]({{ site.url }}/assets/YLTtimeline2.png)
+![YellowLabTools timeline explainations]({{ site.url }}/assets/YLTtimeline2.jpg)
 
 Want a piece of advice here? Avoid manipulating the DOM, before it is completely rendered. Which means no scripts in the middle of the body.
 
@@ -65,7 +65,7 @@ Profiling details
 
 Under the timeline, Yellow Lab Tools provides the entire list of recorded DOM interactions. This example is the beginning of google.com, short and efficient:
 
-![YellowLabTools profiler screenshot]({{ site.url }}/assets/YLTprofiler1.png)
+![YellowLabTools profiler screenshot]({{ site.url }}/assets/YLTprofiler1.jpg)
 
 On each line you can show more information — such as the JS call stack — by clicking on the question mark symbol.
 
@@ -74,7 +74,7 @@ On each line you can show more information — such as the JS call stack — by 
 How to use Yellow Lab Tools?
 ----------------------------
 
-It’s online, and it's here: [http://yellowlab.tools][YellowLab.tools].
+It’s online, and it's here: <a target="_blank" href="http://yellowlab.tools">YellowLab.tools</a>.
 
 
 
@@ -85,7 +85,7 @@ Common bad practices i've seen
 
 The result could be put into a variable, to avoid queries :
 
-![Repeated getElementById queries example]({{ site.url }}/assets/YLTprofiler2.png)
+![Repeated getElementById queries example]({{ site.url }}/assets/YLTprofiler2.jpg)
 
 
 #### 2. The dead (or useless) JS code
@@ -97,14 +97,14 @@ A red warning icon on a line means:
 
 The following extract is probably a piece of code meant for another page:
 
-![Unused code example]({{ site.url }}/assets/YLTprofiler3.png)
+![Unused code example]({{ site.url }}/assets/YLTprofiler3.jpg)
 
 
 #### 3. Many elements binded one by one
 
-On the following extract, a tracker is binding 887 click events on elements of the page and it takes 104ms. If you are binding more than 5 elements, consider using [event delegation][eventsDelegation].
+On the following extract, a tracker is binding 887 click events on elements of the page and it takes 104ms. If you are binding more than 5 elements, consider using <a target="_blank" href="http://davidwalsh.name/event-delegate">event delegation</a>.
 
-![Binding loop example]({{ site.url }}/assets/YLTprofiler4.png)
+![Binding loop example]({{ site.url }}/assets/YLTprofiler4.jpg)
 
 
 #### 4. The read/write loop
@@ -113,7 +113,7 @@ Modern browsers optimize the Javascript execution by buffering the **writing*** 
 
 If you want to take advantage of this behavior, try to group reading queries together and writing queries together, not like the following example:
 
-![Read/write loop example]({{ site.url }}/assets/YLTprofiler5.png)
+![Read/write loop example]({{ site.url }}/assets/YLTprofiler5.jpg)
 
 
 #### 5. The heavy jQuery plugin
@@ -123,7 +123,7 @@ When developers add a plugin to a page, they generally don’t read its code. Th
 The following extract shows the jScrollPane plugin in action on a page. Just a part of it, because it makes 446 interactions and
 it lasts for 229ms.
 
-![Heavy jQuery plugin example]({{ site.url }}/assets/YLTprofiler6.png)
+![Heavy jQuery plugin example]({{ site.url }}/assets/YLTprofiler6.jpg)
 
 
 
@@ -145,11 +145,5 @@ I also have ideas for its future:
 
 
 
-#### Thanks for reading, and i hope you enjoy the tool!
+#### Thanks for reading, and i hope you enjoy <a target="_blank" href="http://yellowlab.tools">the tool</a>!
 
-
-
-
-[YellowLab.tools]:          http://yellowlab.tools
-[Phantomas]:                https://github.com/macbre/phantomas
-[eventsDelegation]:         http://davidwalsh.name/event-delegate
