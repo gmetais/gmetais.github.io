@@ -3,6 +3,7 @@ layout: post
 title:  "Untangle the javascript spaghetti code with YellowLabTools"
 date:   2014-11-18 10:03:00
 categories: yellowlabtools
+excerpt: Introduction to Javascript profiling with Yellow Lab Tools
 ---
 
 As a front-end architect and freelance, i often do performance audits for websites. One recurrent problem is dealing with heavily javascripted pages. They can load up to dozens of scripts, including:
