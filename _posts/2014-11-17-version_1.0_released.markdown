@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Yellow Lab Tools v1.0 is out"
+date:   2014-11-17 15:22:40
+categories: yellowlabtools
+---
+[Yellow Lab Tools][YellowLab.tools] is officially released!
+-----------------------------------------------------------
+
+This is a tool designed to help developers audit their website and detect performance or quality problems. This first version is very Javascript oriented. It will diversify in the future.
+
+
+No installation is required, it's an online tool. Simply go to [http://yellowlab.tools][YellowLab.tools], enter the URL of a webpage and wait for the results.
+
+Help needed:
+------------
+ - I'm currently looking for help in correcting the english wordings in the tool, as it is not my native language.
+ - I also need user feedback. Please report any bug or problem on the project's [GitHub page][github/yellowlabtools].
+
+
+[YellowLab.tools]:          http://yellowlab.tools
+[github/yellowlabtools]:    https://github.com/gmetais/YellowLabTools

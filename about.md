@@ -4,8 +4,11 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I'm Gaël Métais and i work in web performances.
+===============================================
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+This is my blog about Web Performances and Front-End technologies or tools.
+If you understand french, you can visit my website here: [gaelmetais.com][gaelmetais.com].
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+
+[gaelmetais.com]:   http://www.gaelmetais.com
