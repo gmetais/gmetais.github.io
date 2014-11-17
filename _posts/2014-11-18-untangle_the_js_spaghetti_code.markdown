@@ -6,7 +6,7 @@ categories: yellowlabtools
 excerpt: Introduction to Javascript profiling with Yellow Lab Tools
 ---
 
-As a front-end architect and freelance, i often do performance audits for websites. One recurrent problem is dealing with heavily javascripted pages. They can load up to dozens of scripts, including:
+As a front-end architect and freelance, I often do performance audits for websites. One recurrent problem is dealing with heavily javascripted pages. They can load up to dozens of scripts, including:
 
  - non-documented and non-commented jQuery or vanilla JS code,
  - jQuery plugins doing some magical transformations to the DOM,
@@ -23,13 +23,13 @@ I played a lot with <a target="_blank" href="https://github.com/macbre/phantomas
 
 ![phantomas](/assets/phantomas.jpg)
 
-I was fascinated by the fact that it can detect and count Javascript interactions with the DOM. But counting is not enough, i wanted to have more information: 
+I was fascinated by the fact that it can detect and count Javascript interactions with the DOM. But counting is not enough, I wanted to have more information: 
 
  - When did the DOM interactions happen during page load?
  - Which script and which function made the call?
- - Could i detect any kind of redundancy, any unoptimized loops?
+ - Could I detect any kind of redundancy, any unoptimized loops?
 
-So i wrote a Phantomas module that logs everything: DOM queries, readings, writings, bindings. Erm not exactly everything… Actually only functions can be intercepted. Assignments such as « element.className = 'foo' » are not caught (maybe one day with MutationObserver).
+So I wrote a Phantomas module that logs everything: DOM queries, readings, writings, bindings. Erm not exactly everything… Actually only functions can be intercepted. Assignments such as « element.className = 'foo' » are not caught (maybe one day with MutationObserver).
 
 It also records most of jQuery’s functions, the ones that interact with the DOM.
 
@@ -136,7 +136,7 @@ I also have ideas for its future:
 
 **Add intelligence:** because analyzing long listings is fastidious. Every recursive pattern seen in the profiler looks like it is optimizable. So we could probably build some intelligent problem detection algorithms.
 
-**Diversify:** i plan to add more tools inside YLT, for deep CSS analyzing, image optimizations... I know there are already plenty of tools on the market, but i like tools that go deep into the details, like the JS profiler.
+**Diversify:** I plan to add more tools inside YLT, for deep CSS analyzing, image optimizations... I know there are already plenty of tools on the market, but I like tools that go deep into the details, like the JS profiler.
 
 **Add a nice dashboard:** Phantomas offers plenty of interesting metrics. I started to work on a dashboard (have a look at the « Grades », the second tab on the results page). But it needs UX improvements. I want it to be easy to understand and efficient.
 
@@ -145,5 +145,5 @@ I also have ideas for its future:
 
 
 
-#### Thanks for reading, and i hope you enjoy <a target="_blank" href="http://yellowlab.tools">the tool</a>!
+#### Thanks for reading, and I hope you enjoy <a target="_blank" href="http://yellowlab.tools">the tool</a>!
 
