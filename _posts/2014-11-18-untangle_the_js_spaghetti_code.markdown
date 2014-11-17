@@ -21,7 +21,7 @@ Phantomas
 
 I played a lot with <a target="_blank" href="https://github.com/macbre/phantomas">Phantomas (by Maciej Brencz)</a>. Do you know this tool? It’s great, it loads a page with PhantomJS (the headless browser), analyzes various aspects of the page and outputs metrics about performances and quality.
 
-![phantomas]({{ site.url }}/assets/phantomas.jpg)
+![phantomas](/assets/phantomas.jpg)
 
 I was fascinated by the fact that it can detect and count Javascript interactions with the DOM. But counting is not enough, i wanted to have more information: 
 
@@ -43,7 +43,7 @@ When profiling a webpage, there can be thousands of DOM interactions. It needed 
 
 When you launch a test (on www.aol.com for the next screenshot), you'll see a **timeline** that looks like this:
 
-![YellowLabTools timeline screenshot]({{ site.url }}/assets/YLTtimeline1.jpg)
+![YellowLabTools timeline screenshot](/assets/YLTtimeline1.jpg)
 
 This timeline shows the loading of the page. Each bar represents a bunch of Javascript interactions with the DOM.
 
@@ -51,7 +51,7 @@ The page loaded in 4,932ms, but it looks like Javascript took half of this time!
 
 So what can we see on this timeline?
 
-![YellowLabTools timeline explainations]({{ site.url }}/assets/YLTtimeline2.jpg)
+![YellowLabTools timeline explainations](/assets/YLTtimeline2.jpg)
 
 Want a piece of advice here? Avoid manipulating the DOM before it is completely rendered. Which means no scripts in the middle of the body.
 
@@ -66,7 +66,7 @@ Profiling details
 
 Under the timeline, Yellow Lab Tools provides the entire list of recorded DOM interactions. This example is the beginning of google.com, short and efficient:
 
-![YellowLabTools profiler screenshot]({{ site.url }}/assets/YLTprofiler1.jpg)
+![YellowLabTools profiler screenshot](/assets/YLTprofiler1.jpg)
 
 On each line you can show more information — such as the JS call stack — by clicking on the question mark symbol.
 
@@ -86,7 +86,7 @@ Common bad practices i've seen
 
 The result could be put into a variable, to avoid queries :
 
-![Repeated getElementById queries example]({{ site.url }}/assets/YLTprofiler2.jpg)
+![Repeated getElementById queries example](/assets/YLTprofiler2.jpg)
 
 
 #### 2. The dead (or useless) JS code
@@ -98,14 +98,14 @@ A red warning icon on a line means:
 
 The following extract is probably a piece of code meant for another page:
 
-![Unused code example]({{ site.url }}/assets/YLTprofiler3.jpg)
+![Unused code example](/assets/YLTprofiler3.jpg)
 
 
 #### 3. Many elements binded one by one
 
 On the following extract, a tracker binds 887 click events and it takes 104ms. If you are binding more than 5 elements, consider using <a target="_blank" href="http://davidwalsh.name/event-delegate">event delegation</a>.
 
-![Binding loop example]({{ site.url }}/assets/YLTprofiler4.jpg)
+![Binding loop example](/assets/YLTprofiler4.jpg)
 
 
 #### 4. The read/write loop
@@ -114,7 +114,7 @@ Modern browsers optimize the Javascript execution by buffering the **writing*** 
 
 If you want to take advantage of this behavior, try to group reading queries together and writing queries together, not like the following example:
 
-![Read/write loop example]({{ site.url }}/assets/YLTprofiler5.jpg)
+![Read/write loop example](/assets/YLTprofiler5.jpg)
 
 
 #### 5. The heavy jQuery plugin
@@ -123,7 +123,7 @@ When developers add a plugin to a page, they generally don’t read its code. Th
 
 The following extract shows the jScrollPane plugin in action on a page. Just a part of it, because it makes 446 interactions and it lasts for 229ms.
 
-![Heavy jQuery plugin example]({{ site.url }}/assets/YLTprofiler6.jpg)
+![Heavy jQuery plugin example](/assets/YLTprofiler6.jpg)
 
 
 
