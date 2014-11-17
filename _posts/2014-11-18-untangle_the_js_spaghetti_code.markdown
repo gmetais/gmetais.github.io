@@ -1,0 +1,155 @@
+---
+layout: post
+title:  "Untangle the javascript spaghetti code with YellowLabTools"
+date:   2014-11-18 10:03:00
+categories: yellowlabtools
+---
+
+As a front-end architect and freelance, i often do performance audits for websites. One recurrent problem is dealing with heavily javascripted pages. They can load up to dozens of scripts, including:
+
+ - non-documented and non-commented jQuery or vanilla JS code,
+ - jQuery plugins doing some magical transformations to the DOM,
+ - over-minified external scripts the marketing team said « it’s just a small tag, don’t worry ».
+
+How to audit that? How to understand what’s going on on the page? In-browsers JS profilers are nice when you want to detect the slowest functions. But they are of no help if you need to understand why these functions are slow.
+
+
+
+Phantomas
+---------
+
+I played a lot with [Phantomas (by Maciej Brencz)][Phantomas]. Do you know this tool? It’s great, it loads a page with PhantomJS (the headless browser), analyses many different aspects of the page and outputs metrics about performances and quality.
+
+![phantomas]({{ site.url }}/assets/phantomas.jpg)
+
+I was fascinated by the fact that it can detect and count Javascript interactions with the DOM. But counting is not enough, i wanted to have more information: 
+
+ - When did the DOM interactions happen during page load?
+ - Which script and which function made the call?
+ - Could i detect any kind of redundancy, any unoptimized loops?
+
+So i wrote a Phantomas module that logs everything: DOM queries, readings, writings, bindings. Erm not exactly everything… Actually only functions can be intercepted. Assignments such as « element.className = ‘foo’ » are not caught (maybe one day with MutationObserver).
+
+It also records most of jQuery’s functions, the ones that interact with the DOM.
+
+
+
+Yellow Lab Tools
+----------------
+
+When *profiling* a webpage, there can be thousands of DOM interactions. It needed an HTML UI, and that's Yellow Lab Tools.
+
+
+When you launch a test (on aol.com for the next screenshot), you'll see a **timeline** that looks like this:
+
+![YellowLabTools timeline screenshot]({{ site.url }}/assets/YLTtimeline1.png)
+
+This timeline shows the loading of the page. Each bar represents a bunch of Javascript interactions with the DOM.
+
+The page loaded in 4,932ms, but it looks like Javascript took half of this time! Don’t worry, there’s not 2.5 seconds of JS execution when you load aol.com on a real browser. It's 3 or 4 times faster. Spying some Javascript with some more Javascript necessarily slows down the execution.
+
+So what can we see on this timeline?
+
+![YellowLabTools timeline explainations]({{ site.url }}/assets/YLTtimeline2.png)
+
+Want a piece of advice here? Avoid manipulating the DOM, before it is completely rendered. Which means no scripts in the middle of the body.
+
+For the rest, do whatever you want but **prioritize** wisely. Use these visually colorated steps to organize your JS execution by priority. For example, binding the login button of your header could be one of the first actions, so place it at the end of the body. Binding some buttons in the footer can probably wait until window.onload.
+
+And of course the main rule is **reduce the number of DOM interactions**. AOL’s home page has 2,000 of them, that’s a lot.
+
+
+
+Profiling details
+-----------------
+
+Under the timeline, Yellow Lab Tools provides the entire list of recorded DOM interactions. This example is the beginning of google.com, short and efficient:
+
+![YellowLabTools profiler screenshot]({{ site.url }}/assets/YLTprofiler1.png)
+
+On each line you can show more information — such as the JS call stack — by clicking on the question mark symbol.
+
+
+
+How to use Yellow Lab Tools?
+----------------------------
+
+It’s online, and it's here: [http://yellowlab.tools][YellowLab.tools].
+
+
+
+Common bad practices i've seen
+---------------------------------
+
+#### 1. The duplicated queries
+
+The result could be put into a variable, to avoid queries :
+
+![Repeated getElementById queries example]({{ site.url }}/assets/YLTprofiler2.png)
+
+
+#### 2. The dead (or useless) JS code
+
+A red warning icon on a line means:
+
+ - the query returned nothing
+ - or, an action is called an empty jQuery object.
+
+The following extract is probably a piece of code meant for another page:
+
+![Unused code example]({{ site.url }}/assets/YLTprofiler3.png)
+
+
+#### 3. Many elements binded one by one
+
+On the following extract, a tracker is binding 887 click events on elements of the page and it takes 104ms. If you are binding more than 5 elements, consider using [event delegation][eventsDelegation].
+
+![Binding loop example]({{ site.url }}/assets/YLTprofiler4.png)
+
+
+#### 4. The read/write loop
+
+Modern browsers optimize the Javascript execution by buffering the **writing*** DOM queries. But before executing a reading query, the browser needs to clear the writing buffer.
+
+If you want to take advantage of this behavior, try to group reading queries together and writing queries together, not like the following example:
+
+![Read/write loop example]({{ site.url }}/assets/YLTprofiler5.png)
+
+
+#### 5. The heavy jQuery plugin
+
+When developers add a plugin to a page, they generally don’t read its code. They’re just happy it does just what they need. But some plugins have poor performances or are clearly overkill.
+
+The following extract shows the jScrollPane plugin in action on a page. Just a part of it, because it makes 446 interactions and
+it lasts for 229ms.
+
+![Heavy jQuery plugin example]({{ site.url }}/assets/YLTprofiler6.png)
+
+
+
+What’s next for Yellow Lab Tools?
+---------------------------------
+
+I’ll keep on improving the tool. Please give your opinion and report bugs by opening tickets on the GitHub project page.
+
+I also have ideas for its future:
+
+**Add intelligence:** because analyzing long listings is fastidious. Every recursive pattern seen in the profiler looks like it is optimizable. So we could probably build some intelligent problem detection algorithms.
+
+**Diversify:** i plan to add more tools inside YLT, for deep CSS analyzing, image optimizations... I know there are already plenty of tools on the market, but i like tools that go deep into the details, like the JS profiler.
+
+**Add a nice dashboard:** Phantomas offers plenty of interesting metrics. I started to work on a dashboard (have a look at the « Grades », the second tab on the results page). But it needs UX improvements. I want it to be easy to understand and efficient.
+
+**Refactor the code:** A human readable tool is nice, but nothing’s better than automated performance monitoring. The next YLT version will be API first.
+
+
+
+
+#### Thanks for reading, and i hope you enjoy the tool!
+
+
+
+
+[YellowLab.tools]:          http://yellowlab.tools
+[Phantomas]:                https://github.com/macbre/phantomas
+[eventsDelegation]:         http://davidwalsh.name/event-delegate
