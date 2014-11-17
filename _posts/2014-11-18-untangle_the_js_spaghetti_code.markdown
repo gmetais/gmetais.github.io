@@ -10,16 +10,16 @@ As a front-end architect and freelance, i often do performance audits for websit
 
  - non-documented and non-commented jQuery or vanilla JS code,
  - jQuery plugins doing some magical transformations to the DOM,
- - over-minified external scripts the marketing team said « it’s just a small tag, don’t worry ».
+ - over-minified external scripts the marketing said « it’s just a small tag, don’t worry ».
 
-How to audit that? How to understand what’s going on on the page? In-browsers JS profilers are nice when you want to detect the slowest functions. But they are of no help if you need to understand why these functions are slow.
+How to audit that? How to understand what’s happening on the page? In-browsers JS profilers are nice when you want to detect the slowest functions but they are of no help if you need to understand why these functions are slow.
 
 
 
 Phantomas
 ---------
 
-I played a lot with <a target="_blank" href="https://github.com/macbre/phantomas">Phantomas (by Maciej Brencz)</a>. Do you know this tool? It’s great, it loads a page with PhantomJS (the headless browser), analyses many different aspects of the page and outputs metrics about performances and quality.
+I played a lot with <a target="_blank" href="https://github.com/macbre/phantomas">Phantomas (by Maciej Brencz)</a>. Do you know this tool? It’s great, it loads a page with PhantomJS (the headless browser), analyzes various aspects of the page and outputs metrics about performances and quality.
 
 ![phantomas]({{ site.url }}/assets/phantomas.jpg)
 
@@ -29,7 +29,7 @@ I was fascinated by the fact that it can detect and count Javascript interaction
  - Which script and which function made the call?
  - Could i detect any kind of redundancy, any unoptimized loops?
 
-So i wrote a Phantomas module that logs everything: DOM queries, readings, writings, bindings. Erm not exactly everything… Actually only functions can be intercepted. Assignments such as « element.className = ‘foo’ » are not caught (maybe one day with MutationObserver).
+So i wrote a Phantomas module that logs everything: DOM queries, readings, writings, bindings. Erm not exactly everything… Actually only functions can be intercepted. Assignments such as « element.className = 'foo' » are not caught (maybe one day with MutationObserver).
 
 It also records most of jQuery’s functions, the ones that interact with the DOM.
 
@@ -38,7 +38,7 @@ It also records most of jQuery’s functions, the ones that interact with the DO
 Yellow Lab Tools
 ----------------
 
-When *profiling* a webpage, there can be thousands of DOM interactions. It needed an HTML UI, and that's Yellow Lab Tools.
+When profiling a webpage, there can be thousands of DOM interactions. It needed an HTML UI, and that's what Yellow Lab Tools brings.
 
 
 When you launch a test (on www.aol.com for the next screenshot), you'll see a **timeline** that looks like this:
@@ -47,15 +47,15 @@ When you launch a test (on www.aol.com for the next screenshot), you'll see a **
 
 This timeline shows the loading of the page. Each bar represents a bunch of Javascript interactions with the DOM.
 
-The page loaded in 4,932ms, but it looks like Javascript took half of this time! Don’t worry, there’s not 2.5 seconds of JS execution when you load www.aol.com on a real browser. It's 3 or 4 times faster. Spying some Javascript with some more Javascript necessarily slows down the execution.
+The page loaded in 4,932ms, but it looks like Javascript took half of this time! Don’t worry, there aren't 2.5 seconds of JS execution when you load www.aol.com on a real browser. It's 3 or 4 times faster. Spying some Javascript with some more Javascript necessarily slows down the execution.
 
 So what can we see on this timeline?
 
 ![YellowLabTools timeline explainations]({{ site.url }}/assets/YLTtimeline2.jpg)
 
-Want a piece of advice here? Avoid manipulating the DOM, before it is completely rendered. Which means no scripts in the middle of the body.
+Want a piece of advice here? Avoid manipulating the DOM before it is completely rendered. Which means no scripts in the middle of the body.
 
-For the rest, do whatever you want but **prioritize** wisely. Use these visually colorated steps to organize your JS execution by priority. For example, binding the login button of your header could be one of the first actions, so place it at the end of the body. Binding some buttons in the footer can probably wait until window.onload.
+For the rest, do whatever you want but **prioritize** wisely. Use these visually colorated steps to organize your JS execution by priority. For example, binding the login button in your header could be one of the first actions, so place it at the end of the body. Binding some buttons in the footer can probably wait until « window.onload ».
 
 And of course the main rule is **reduce the number of DOM interactions**. AOL’s home page has 2,000 of them, that’s a lot.
 
@@ -93,7 +93,7 @@ The result could be put into a variable, to avoid queries :
 
 A red warning icon on a line means:
 
- - the query returned nothing
+ - the query didn't return anything
  - or, an action is called an empty jQuery object.
 
 The following extract is probably a piece of code meant for another page:
@@ -103,7 +103,7 @@ The following extract is probably a piece of code meant for another page:
 
 #### 3. Many elements binded one by one
 
-On the following extract, a tracker is binding 887 click events on elements of the page and it takes 104ms. If you are binding more than 5 elements, consider using <a target="_blank" href="http://davidwalsh.name/event-delegate">event delegation</a>.
+On the following extract, a tracker binds 887 click events and it takes 104ms. If you are binding more than 5 elements, consider using <a target="_blank" href="http://davidwalsh.name/event-delegate">event delegation</a>.
 
 ![Binding loop example]({{ site.url }}/assets/YLTprofiler4.jpg)
 
@@ -119,10 +119,9 @@ If you want to take advantage of this behavior, try to group reading queries tog
 
 #### 5. The heavy jQuery plugin
 
-When developers add a plugin to a page, they generally don’t read its code. They’re just happy it does just what they need. But some plugins have poor performances or are clearly overkill.
+When developers add a plugin to a page, they generally don’t read its code. They’re hust happy it does what they need. But some plugins have poor performances or are clearly overkill.
 
-The following extract shows the jScrollPane plugin in action on a page. Just a part of it, because it makes 446 interactions and
-it lasts for 229ms.
+The following extract shows the jScrollPane plugin in action on a page. Just a part of it, because it makes 446 interactions and it lasts for 229ms.
 
 ![Heavy jQuery plugin example]({{ site.url }}/assets/YLTprofiler6.jpg)
 
