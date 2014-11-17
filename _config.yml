@@ -1,0 +1,15 @@
+# Site settings
+title: Gael Metais, A blog about Webperf tools
+email: 
+description: > # this means to ignore newlines until "baseurl:"
+  Hi! I'm Gaël Métais, a freelance front-end architect, specialized in Web Performances. I live in Paris, France and i can work for you.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: gaelmetais
+github_username:  gmetais
+timezone: Europe/Paris
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
