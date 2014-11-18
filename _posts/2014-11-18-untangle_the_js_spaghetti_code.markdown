@@ -148,5 +148,6 @@ I also have ideas for its future:
 
 
 
-#### Thanks for reading, and I hope you enjoy <a target="_blank" href="http://yellowlab.tools">the tool</a>!
+#### Thanks for reading, and I hope you enjoy <a target="_blank" href="http://yellowlab.tools">my tool</a>!
 
+> Special thanks to <a target="_blank" href="https://twitter.com/stefanjudis">Stefan Judis</a> - creator of <a target="_blank" href="http://perf-tooling.today/">perf-tooling.today</a> for reviewing this article. And thank you <a target="_blank" href="https://github.com/macbre">Maciej Brencz</a> for your excellent tools Phantomas and Analyze-CSS.
