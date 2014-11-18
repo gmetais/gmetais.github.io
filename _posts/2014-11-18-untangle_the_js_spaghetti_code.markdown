@@ -6,7 +6,7 @@ categories: yellowlabtools
 excerpt: Introduction to Javascript profiling with Yellow Lab Tools
 ---
 
-As a front-end architect and freelancer, I often do performance audits for websites. One recurrent problem is dealing with page making a heavy usage of JavaScript . They can load up to dozens of scripts, including:
+As a front-end architect and freelancer, I often do performance audits for websites. One recurrent problem is dealing with page making a heavy usage of JavaScript. They can load up to dozens of scripts, including:
 
  - non-documented and non-commented jQuery or vanilla JS code,
  - jQuery plugins doing some magical transformations to the DOM,
@@ -19,7 +19,7 @@ How to audit that? How to understand what’s happening on the page? In-browsers
 Phantomas
 ---------
 
-I played a lot with <a target="_blank" href="https://github.com/macbre/phantomas">Phantomas (by Maciej Brencz)</a>. I case you don't know this tool? It’s great, it loads a page with <a target="_blank" href="http://phantomjs.org/">PhantomJS (a headless browser)</a>, analyzes various aspects of the page and outputs metrics about performances and quality.
+I played a lot with <a target="_blank" href="https://github.com/macbre/phantomas">Phantomas (by Maciej Brencz)</a>. In case you don't know this tool, it’s great. It loads a page with <a target="_blank" href="http://phantomjs.org/">PhantomJS (a headless browser)</a>, analyzes various aspects of the page and outputs metrics about performances and quality.
 
 ![phantomas](/assets/phantomas.jpg)
 
