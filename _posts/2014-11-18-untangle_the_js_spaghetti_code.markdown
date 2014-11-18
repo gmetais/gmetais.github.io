@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Untangle the javascript spaghetti code with YellowLabTools"
+title:  "Untangle the JavaScript spaghetti code with YellowLabTools"
 date:   2014-11-18 10:03:00
 categories: yellowlabtools
-excerpt: Introduction to Javascript profiling with Yellow Lab Tools
+excerpt: An introduction to JavaScript profiling with Yellow Lab Tools
 ---
 
 As a front-end architect and freelancer, I often do performance audits for websites. One recurrent problem is dealing with page making a heavy usage of JavaScript. They can load up to dozens of scripts, including:
@@ -23,7 +23,7 @@ I played a lot with <a target="_blank" href="https://github.com/macbre/phantomas
 
 ![phantomas](/assets/phantomas.jpg)
 
-I was fascinated by the fact that it can detect and count Javascript interactions with the DOM. But counting is not enough, I wanted to have more information: 
+I was fascinated by the fact that it can detect and count JavaScript interactions with the DOM. But counting is not enough, I wanted to have more information: 
 
  - When did the DOM interactions happen during page load?
  - Which script and which function made the call?
@@ -48,7 +48,7 @@ When you launch a test (on www.aol.com for the next screenshot), you'll see a **
 
 ![YellowLabTools timeline screenshot](/assets/YLTtimeline1.jpg)
 
-This timeline shows the loading of the page. Each bar represents a bunch of Javascript interactions with the DOM.
+This timeline shows the loading of the page. Each bar represents a bunch of JavaScript interactions with the DOM.
 
 The page loaded in 4,932ms, but it looks like JavaScript took half of this time! Don’t worry, there aren't 2.5 seconds of JS execution when you load www.aol.com on a real browser. It's 3 or 4 times faster. Spying some JavaScript with some more JavaScript necessarily slows down the execution.
 
@@ -113,7 +113,7 @@ On the following extract, a tracker binds 887 click events and it takes 104ms. I
 
 #### 4. The read/write loop
 
-Modern browsers optimize the Javascript execution by buffering the **writing*** DOM queries. But before executing a reading query, the browser needs to clear the writing buffer.
+Modern browsers optimize the JavaScript execution by buffering the **writing*** DOM queries. But before executing a reading query, the browser needs to clear the writing buffer.
 
 If you want to take advantage of this behavior try to group reading queries together and writing queries together, not like the following example:
 
