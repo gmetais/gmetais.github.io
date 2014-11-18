@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Untangle the JavaScript spaghetti code with YellowLabTools"
-date:   2014-11-18 10:03:00
+title: "Untangle the JavaScript spaghetti code with YellowLabTools"
+date: 2014-11-18 10:03:00
 categories: yellowlabtools
 excerpt: An introduction to JavaScript profiling with Yellow Lab Tools
+comments: true
 ---
 
 As a front-end architect and freelancer, I often do performance audits for websites. One recurrent problem is dealing with page making a heavy usage of JavaScript. They can load up to dozens of scripts, including:

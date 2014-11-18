@@ -4,6 +4,7 @@ title:  "Yellow Lab Tools v1.0 is out"
 date:   2014-11-17 15:22:40
 categories: yellowlabtools
 excerpt: Release note
+comments: true
 ---
 [Yellow Lab Tools][YellowLab.tools] is officially released!
 -----------------------------------------------------------
