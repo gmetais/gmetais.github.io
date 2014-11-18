@@ -67,7 +67,7 @@ And of course the main rule is **reduce the number of DOM interactions**. AOL’
 Profiling details
 -----------------
 
-Below the timeline Yellow Lab Tools provides the entire list of recorded DOM interactions. This example is the beginning of google.com - short and efficient:
+Below the timeline Yellow Lab Tools provides the entire list of recorded DOM interactions. This example is the beginning of google.com — short and efficient:
 
 ![YellowLabTools profiler screenshot](/assets/YLTprofiler1.jpg)
 
@@ -150,4 +150,4 @@ I also have ideas for its future:
 
 #### Thanks for reading, and I hope you enjoy <a target="_blank" href="http://yellowlab.tools">my tool</a>!
 
-> Special thanks to <a target="_blank" href="https://twitter.com/stefanjudis">Stefan Judis</a> - creator of <a target="_blank" href="http://perf-tooling.today/">perf-tooling.today</a> for reviewing this article. And thank you <a target="_blank" href="https://github.com/macbre">Maciej Brencz</a> for your excellent tools Phantomas and Analyze-CSS.
+> Special thanks to <a target="_blank" href="https://twitter.com/stefanjudis">Stefan Judis</a> — creator of <a target="_blank" href="http://perf-tooling.today/">perf-tooling.today</a> — for reviewing this article. And thank you <a target="_blank" href="https://github.com/macbre">Maciej Brencz</a> — creator of Phantomas and Analyze-CSS — for your excellent tools
