@@ -9,8 +9,6 @@ comments: true
 [Yellow Lab Tools][YellowLab.tools] can now be automated!
 -----------------------------------------------------------
 
-## The new v1.1 version contains a major internal refactor
-
 I'm very happy to present this new version! Many changes, but not many of them will be visible on the online service because it's a big code refactor. It transforms the initial Proof of Concept architecture into a more durable one and it adds possibilities for developers (you!) to automate the tool.
 
 ##### Yellow Lab Tools can now be used:
