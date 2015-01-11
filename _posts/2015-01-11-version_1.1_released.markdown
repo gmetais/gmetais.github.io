@@ -32,3 +32,4 @@ I'm very happy to present this new version! Many changes, but not many of them w
 - New **Small requests** category, reporting small JS, CSS or image files that could be inlined, concatenated, sprited...
 - Embedded `<style>` are now analyzed by css-analyze.
 
+[YellowLab.tools]:          http://yellowlab.tools
