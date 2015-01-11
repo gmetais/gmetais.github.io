@@ -11,9 +11,9 @@ Yellow Lab Tools runs on a Node.js server and lets developers test a website (vi
 
 These metrics are then manipulated and presented in an easy to understand manner, organized in categories of interest.
 
-Currently there's a section for analyzing the JavaScript execution timeline, complete with a JavaScript profiler that lets developers see how JS scripts have been executed, what where their results and how it impacted the page performance.
+The main utility is a grading feature that provides A-to-F grades based on the performance of various utilities and operations like DOM complexity, DOM manipulation, the number of HTTP requests, network interactions, CSS complexity, and so on.
 
-The second main utility is a grading feature that provides A-to-F grades based on the performance of various utilities and operations like DOM complexity, DOM manipulation, the number of HTTP requests, network interactions, CSS complexity, and so on.
+There's also a section for analyzing the JavaScript execution timeline, complete with a JavaScript profiler that lets developers see how JS scripts have been executed, what where their results and how it impacted the page performance.
 
 All in all, Yellow Lab Tools can be really useful for both beginner and advanced coders, helping them improve or fix the way they write JS and CSS, boosting page loading speeds and their code's overall performance.
 

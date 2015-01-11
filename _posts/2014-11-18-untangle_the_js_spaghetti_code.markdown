@@ -45,7 +45,7 @@ Yellow Lab Tools
 When profiling a webpage, there can be thousands of DOM interactions, that are hard to analyze. It needed an HTML UI, and that's what Yellow Lab Tools brings in.
 
 
-When you launch a test (on www.aol.com for the next screenshot), you'll see a **timeline** that looks like this:
+After launching a test click on the "JS Timeline" menu button. You'll see a **timeline** that looks like this (example with www.aol.com):
 
 ![YellowLabTools timeline screenshot](/assets/YLTtimeline1.jpg)
 
@@ -79,7 +79,7 @@ On each line you can show more information — such as the JS call stack — by 
 How to use Yellow Lab Tools?
 ----------------------------
 
-It’s online, and it's here: <a target="_blank" href="http://yellowlab.tools">YellowLab.tools</a>.
+It’s online, it's free and it's open-source: <a target="_blank" href="http://yellowlab.tools">YellowLab.tools</a>.
 
 
 
@@ -142,13 +142,10 @@ I also have ideas for its future:
 
 **Diversify:** I plan to add more tools inside YLT, for deep CSS analyzing, image optimizations... I know there are already plenty of tools on the market, but I like tools that go deep into the details, like for example the JS profiler does.
 
-**Add a nice dashboard:** Phantomas offers plenty of interesting metrics. I started to work on a dashboard (have a look at the « Grades », the second tab on the results page). But it needs UX improvements. I want it to be easy to understand and efficient to work with.
-
-**Refactor the code:** A human readable tool is nice, but nothing’s better than automated performance monitoring. The next YLT version will be API first.
-
-
 
 
 #### Thanks for reading, and I hope you enjoy <a target="_blank" href="http://yellowlab.tools">my tool</a>!
+
+Update 2015/01/11: v1.1 is out, i had to change a few lines in this article.
 
 > Special thanks to <a target="_blank" href="https://twitter.com/stefanjudis">Stefan Judis</a> — creator of <a target="_blank" href="http://perf-tooling.today/">perf-tooling.today</a> — for reviewing this article. And thank you <a target="_blank" href="https://github.com/macbre">Maciej Brencz</a> — creator of Phantomas and Analyze-CSS — for your excellent tools
