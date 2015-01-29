@@ -114,7 +114,7 @@ On the following extract, a tracker binds 887 click events and it takes 104ms. I
 
 #### 4. The read/write loop
 
-Modern browsers optimize the JavaScript execution by buffering the **writing*** DOM queries. But before executing a reading query, the browser needs to clear the writing buffer.
+Modern browsers optimize the JavaScript execution by buffering the **writing** DOM queries. But before executing a reading query, the browser needs to clear the writing buffer.
 
 If you want to take advantage of this behavior try to group reading queries together and writing queries together, not like the following example:
 
