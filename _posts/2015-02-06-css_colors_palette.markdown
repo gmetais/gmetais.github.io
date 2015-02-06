@@ -6,10 +6,8 @@ categories: yellowlabtools
 excerpt: and generate the colors palette
 comments: true
 ---
-Keep an eye on the number of different colors in your CSS
----------------------------------------------------------
 
-New in V1.2.0, [Yellow Lab Tools][YellowLab.tools] now retrieves the list of colors defined in CSS on a page from analyze-css (by [@macbre][@macbre]). It then transforms the list in a nice colors palette, where each color is sized by number of occurrences.
+[Yellow Lab Tools][YellowLab.tools] now retrieves the list of colors defined in CSS on a page from analyze-css (by [@macbre][@macbre]). It then transforms the list in a nice colors palette, where each color is sized by number of occurrences.
 
 ![YellowLabTools colors palette](/assets/palette-etsy.png)
 
