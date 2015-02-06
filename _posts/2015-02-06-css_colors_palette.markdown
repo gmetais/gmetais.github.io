@@ -29,9 +29,9 @@ comments: true
 
 ### Good practices
 
-Try to maintain a small palette.
+**Try to maintain a small palette.**
 
-You can achieve this by switching to a CSS pre-compiler such as Less or Sass. Set a list of authorised colors in variables and don't allow anyone to set a color property that's not a variable.
+You can achieve this by switching to a CSS pre-compiler such as Less or Sass. Set a list of authorised colors in **variables** and don't allow anyone to set a color property that's not a variable.
 
 Be extra-careful with colors close to each other. This other tool can help you by telling wich colors could be merged as the human eye wouldn't see the diffences: [css-colorguard][css-colorguard].
 
