@@ -15,9 +15,9 @@ comments: true
 
 ### How to get your own?
 
-1. Go to [Yellow Lab Tools][YellowLab.tools]
+1. Go to [Yellow Lab Tools][YellowLab.tools].
 
-2. Enter the URL of a webpage
+2. Enter the URL of your webpage.
 
 3. Once the test is complete, click on the "Different colors" line.
 
