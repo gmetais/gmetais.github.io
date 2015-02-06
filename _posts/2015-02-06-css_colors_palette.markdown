@@ -7,7 +7,7 @@ excerpt: and generate the colors palette
 comments: true
 ---
 
-[Yellow Lab Tools][YellowLab.tools] now retrieves the list of colors defined in CSS on a page from analyze-css (by [@macbre][@macbre]). It then transforms the list in a nice colors palette, where each color is sized by number of occurrences.
+[Yellow Lab Tools][YellowLab.tools] now retrieves the list of colors defined in CSS on a page (thanks to [@analyze-css][@analyze-css] by Maciej Brencz). It then transforms the list in a nice colors palette, where each color is sized by number of occurrences.
 
 ![YellowLabTools colors palette](/assets/palette-etsy.png)
 
@@ -38,5 +38,5 @@ Be extra-careful with colors close to each other. This tool can help you by tell
 
 
 [YellowLab.tools]:          http://yellowlab.tools
-[@macbre]:                  https://github.com/macbre/analyze-css
+[@analyze-css]:                  https://github.com/macbre/analyze-css
 [css-colorguard]:           https://github.com/SlexAxton/css-colorguard
