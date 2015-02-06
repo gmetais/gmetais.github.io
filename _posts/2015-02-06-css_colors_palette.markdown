@@ -13,7 +13,7 @@ comments: true
 
 
 
-### How to get your own?
+### How to calculate your own colors palette?
 
 1. Go to [Yellow Lab Tools][YellowLab.tools].
 
