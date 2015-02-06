@@ -22,7 +22,7 @@ New in V1.2.0, [Yellow Lab Tools][YellowLab.tools] now retrieves the list of col
 
 3. Once the test is complete, click on the "Different colors" line.
 
-![YellowLabTools colors line](/assets/colors-line.png)
+    ![YellowLabTools colors line](/assets/colors-line.png)
 
 4. Here you go!
 
