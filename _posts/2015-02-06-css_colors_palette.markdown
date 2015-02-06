@@ -31,7 +31,7 @@ comments: true
 
 Try to maintain a small palette.
 
-Switching to a CSS pre-compiler such as Less or Sass can help. Set a list of authorised colors in variables and don't allow any other color that is not a variable to be set on a property.
+You can achieve this by switching to a CSS pre-compiler such as Less or Sass. Set a list of authorised colors in variables and don't allow any other color that is not a variable to be set on a property.
 
 Be extra-careful with colors close to each other. This tool can help you by telling wich colors could be merged as the human eye wouldn't see the diffences: [css-colorguard][css-colorguard].
 
