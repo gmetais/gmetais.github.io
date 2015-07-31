@@ -101,7 +101,7 @@ Sorry my old IE8 friend, you're not able to understand SVG images...
 
 -----
 
-> Special thanks to <a target="_blank" href="https://twitter.com/sarasoueidan">Sara Soueidan</a> — Front-end and SVG Guru — for reviewing this article.
+*Special thanks to <a target="_blank" href="https://twitter.com/sarasoueidan">Sara Soueidan</a> — Front-end and SVG Guru — for reviewing this article.*
 
 
 [svg-image-merge]:      https://github.com/gmetais/svg-image-merge

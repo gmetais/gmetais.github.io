@@ -98,9 +98,6 @@ Désolé mon vieux IE8, tu n'es pas capable de comprendre le SVG...
 J'ai créé [cet outil][svg-image-merge] en ligne de commande, qui fera pour vous la partie technique : encodage en base64 des images et injection dans le SVG.
 
 
------
-
-> Remerciements particuliers à <a target="_blank" href="https://twitter.com/sarasoueidan">Sara Soueidan</a> — Guru du front-end et du SVG — pour la relecture de cet article.
 
 
 [svg-image-merge]:      https://github.com/gmetais/svg-image-merge
