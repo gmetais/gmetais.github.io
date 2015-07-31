@@ -29,7 +29,7 @@ layout: default
           return hash;
         };
 
-        var articleId = '{{ page.id }}'.hashCode();
+        var articleId = Math.abs('{{ page.id }}'.hashCode());
         Livefyre.require(['fyre.conv#3'], function(Conv) {
           new Conv({}, [{
             el: 'livefyre-comments',
