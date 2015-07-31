@@ -18,17 +18,18 @@ layout: default
     <script type="text/javascript">
         (function () {
             var articleId = fyre.conv.load.makeArticleId(null);
-            fyre.conv.load({}, [{
+            Livefyre.require(['fyre.conv#3'], function(Conv) {
+              new Conv({}, [{
                 el: 'livefyre-comments',
                 network: "livefyre.com",
                 siteId: "367896",
                 articleId: articleId,
                 signed: false,
                 collectionMeta: {
-                    articleId: articleId,
-                    url: fyre.conv.load.makeCollectionUrl()
-                }
-            }], function() {});
+                  articleId: articleId,
+                  url: fyre.conv.load.makeCollectionUrl()
+                }], function() {});
+            });
         }());
     </script>
   {% endif %}
