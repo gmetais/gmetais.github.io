@@ -41,14 +41,16 @@ Save the background in JPEG and optimize it as much as you want.
 
 ![optimized background](/assets/background-65.jpg)
 
-Save the text as a PNG with a transparent background and optimize it losslessly.
+Save the text as a PNG with a transparent background and optimize it losslessly ([ImageOptim][ImageOptim] on Mac or [Kraken.io][Kraken.io] online).
 
 ![optimized text](/assets/text-alone.png)
 
 
 ### ... and use SVG to stick them into a single image file
 
-You could insert these two images in HTML with CSS positioning. **But it won't work if you really need a single image file**, like if it needs to be inserted in your Wordpress or in a carousel.
+You will argue, you could insert these two images in HTML and position them on top of each other. Yes, definitely! Even better, write the text in HTML directly!
+
+**But what if you REALLY need a single image file**, like if it needs to be inserted in your Wordpress, in a carousel, in any template that does not allow what you want?
 
 Use your text editor to create an SVG file like this:
 
@@ -59,9 +61,9 @@ Use your text editor to create an SVG file like this:
 </svg>
 ```
 
-Then compare with other formats. The result file is not always smaller than JPEG. It will depend on the possibility to optimize both JPEG and PNG files separately.
+Then compare with JPEG encoding test files. The result file is not always smaller than JPEG. It will depend on the optimization capacity of both JPEG and PNG files separately.
 
-But wait! Make sure your server correctly serves your SVG files gzipped. That’s a very common mistake.
+But wait! Make sure your server correctly serves your SVG files gzipped. That’s a very common configuration mistake.
 
 ![check gzip compression](/assets/gzip.png)
 
@@ -90,8 +92,10 @@ Sorry my old IE8 friend, you're not able to understand SVG images...
 
 ### I started a small tool
 
-[Here][svg-image-merge] is a small command line tool I wrote, that will do the technical part for you: base64 encode the files and insert them into the SVG.
+[Here][svg-image-merge] is a command line tool I wrote, that will do the technical part for you: base64 encode the files and inject them into the SVG.
 
 
 
 [svg-image-merge]:      https://github.com/gmetais/svg-image-merge
+[ImageOptim]:           https://imageoptim.com/fr.html
+[Kraken.io]:            https://kraken.io/
