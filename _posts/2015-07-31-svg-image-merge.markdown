@@ -24,14 +24,14 @@ So it’s time to optimize it, and here comes the hard part… If you optimize t
 
 You try as a PNG: the quality is perfect, but it’s even bigger than the original JPEG! So you end up trying to balance JPEG encoding and text quality and finally choose a quality of 90%.
 
---
+-----
 
 | JPEG 100%                        | 511KB    |
 | PNG                              | 587KB    |
 | JPEG lossy compr. with Kraken    | 144KB    |
 | **JPEG 90%**                     | **84KB** |
 
---
+-----
 
 Well, there might be a solution for this problem ...
 
@@ -70,14 +70,14 @@ But wait! Make sure your server correctly serves your SVG files gzipped. That’
 
 ![result svg file](/assets/result.svg)
 
--- 
+-----
 
 | JPEG background 65% alone        | 32KB     |
 | PNG text alone                   | 17KB     |
 | Result SVG                       | 64KB     |
 | **Result SVG gzipped**           | **47KB** |
 
---
+-----
 
 
 ### Browser compatibility
