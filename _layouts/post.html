@@ -16,22 +16,34 @@ layout: default
     <div id="livefyre-comments"></div>
     <script type="text/javascript" src="https://cdn.livefyre.com/Livefyre.js"></script>
     <script type="text/javascript">
-        (function () {
-            var articleId = fyre.conv.load.makeArticleId(null);
-            Livefyre.require(['fyre.conv#3'], function(Conv) {
-              new Conv({}, [{
-                el: 'livefyre-comments',
-                network: "livefyre.com",
-                siteId: "367896",
-                articleId: articleId,
-                signed: false,
-                collectionMeta: {
-                  articleId: articleId,
-                  url: fyre.conv.load.makeCollectionUrl()
-                }
-              }], function() {});
-            });
-        }());
+      (function () {
+
+        String.prototype.hashCode = function() {
+          var hash = 0, i, chr, len;
+          if (this.length == 0) return hash;
+          for (i = 0, len = this.length; i < len; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+          }
+          return hash;
+        };
+
+        var articleId = '{{ page.id }}'.hashCode();
+        Livefyre.require(['fyre.conv#3'], function(Conv) {
+          new Conv({}, [{
+            el: 'livefyre-comments',
+            network: "livefyre.com",
+            siteId: "367896",
+            articleId: articleId,
+            signed: false,
+            collectionMeta: {
+              articleId: articleId,
+              url: fyre.conv.load.makeCollectionUrl()
+            }
+          }], function() {});
+        });
+      }());
     </script>
   {% endif %}
 
