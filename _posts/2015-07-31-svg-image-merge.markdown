@@ -28,7 +28,6 @@ You try as a PNG: the quality is perfect, but it’s even bigger than the origin
 
 | JPEG 100%                        | 511KB    |
 | PNG                              | 587KB    |
-| JPEG lossy compr. with Kraken    | 144KB    |
 | **JPEG 90%**                     | **84KB** |
 
 -----
