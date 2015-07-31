@@ -18,7 +18,7 @@ Done!
 
 You save it as a JPEG and you see the weight on your drive: **511KB!**
 
-So it’s time to optimize it, and here comes the hard part… If you optimize the image as a JPEG below the 80% quality, you’re able to obtain a small weight, but the quality of the text suffers, with some **approximations and artefacts** due to the compression algorithm. It’s too sad, because the background is still good with a 65% compression…
+So it’s time to optimize it, and here comes the hard part... If you optimize the image as a JPEG below the 80% quality, you’re able to obtain a small weight, but the quality of the text suffers, with some **approximations and artefacts** due to the compression algorithm. It’s too sad, because your background photography is still good with a 65% compression...
 
 ![JPEG encoding artefacts](/assets/not-so-sharp.png)
 
@@ -35,7 +35,7 @@ You try as a PNG: the quality is perfect, but it’s even bigger than the origin
 Well, there might be a solution for this problem ...
 
 
-### Keep the background and the text in two separated images…
+### Keep the background and the text in two separated images...
 
 Save the background in JPEG and optimize it as much as you want.
 
@@ -48,7 +48,8 @@ Save the text as a PNG with a transparent background and optimize it losslessly.
 
 ### ... and use SVG to stick them into a single image file
 
-You could insert these two images in HTML with CSS positioning. **But if you really need a single image file**, like if it needs to be inserted in your Wordpress or in a carousel. 
+You could insert these two images in HTML with CSS positioning. **But it won't work if you really need a single image file**, like if it needs to be inserted in your Wordpress or in a carousel.
+
 Use your text editor to create an SVG file like this:
 
 ```xml
@@ -77,6 +78,9 @@ But wait! Make sure your server correctly serves your SVG files gzipped. That’
 | **Result SVG gzipped:**           | **47KB** |
 
 --
+
+
+*The text could also be directy written with SVG. Of course, in this case, don't base64 encode it.*
 
 
 ### Browser compatibility
