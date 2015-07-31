@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[French] Le SVG pour optimiser des images non-vectorielles"
+title:  "Le SVG pour optimiser des images non-vectorielles"
 date:   2015-07-31 12:17:00
 categories: image-optim
-excerpt: Une technique pour les tarés de l'optimisation
+excerpt: [French] Une technique pour les tarés de l'optimisation
 comments: true
 ---
 
