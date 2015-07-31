@@ -3,7 +3,7 @@ layout: post
 title:  "Use SVG to optimize non-vectorial images"
 date:   2015-07-31 12:17:00
 categories: image-optim
-excerpt: an optimization technic for image optimization freaks
+excerpt: An optimization technic for image optimization freaks
 comments: true
 ---
 
@@ -84,7 +84,7 @@ Make sure your server correctly serves your SVG files gzipped. That’s a very c
 --
 
 
-*The text could also be directy written with SVG. Of course, in this case, don't base64 encode it.*
+*The text could also be directly written with SVG. Of course, in this case, don't base64 encode it.*
 
 
 ### Browser compatibility

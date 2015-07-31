@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Utiliser SVG pour optimiser des images non-vectorielles"
+title:  "[French] Le SVG pour optimiser des images non-vectorielles"
 date:   2015-07-31 12:17:00
 categories: image-optim
-excerpt: une technique pour les tarés de l'optimisation
+excerpt: Une technique pour les tarés de l'optimisation
 comments: true
 ---
 
@@ -83,7 +83,7 @@ D'ailleurs, vérifiez que votre serveur envoie bien les fichiers SVG gzippés. C
 
 --
 
-*Le texte pourrait même être directemet écrit en SVG. Mais bien sûr, dans ce cas, n'encodez pas ce SVG en base64.*
+*Le texte pourrait même être directement écrit en SVG. Mais bien sûr, dans ce cas, ne l'encodez pas en base64.*
 
 
 ### Compatibilité navigateur
