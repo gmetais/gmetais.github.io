@@ -63,7 +63,9 @@ A little known SVG functionnality lets you insert a non-SVG image inside an SVG,
 
 Then compare with JPEG encoding test files. The result file is not always smaller than JPEG. It will depend on the optimization capacity of both JPEG and PNG files separately.
 
-But wait! Make sure your server correctly serves your SVG files gzipped. That’s a very common configuration mistake. Gzip is what will prevent base64 encoding to make performance implications.
+But wait! Compare the weights after compressing your SVG (with zip or gzip). Unlike the other image formats, SVG is an uncompressed format.
+
+Make sure your server correctly serves your SVG files gzipped. That’s a very common configuration mistake. Gzip is what will prevent base64 encoding to make performance implications.
 
 ![check gzip compression](/assets/gzip.png)
 
@@ -97,5 +99,5 @@ Sorry my old IE8 friend, you're not able to understand SVG images...
 
 
 [svg-image-merge]:      https://github.com/gmetais/svg-image-merge
-[ImageOptim]:           https://imageoptim.com/fr.html
+[ImageOptim]:           https://imageoptim.com/
 [Kraken.io]:            https://kraken.io/

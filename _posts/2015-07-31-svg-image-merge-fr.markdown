@@ -50,7 +50,7 @@ Enregistrez le texte en PNG et optimisez-le avec un outil d'optimisation sans pe
 
 Vous allez me dire que pourriez insérer ces deux images dans l'HTML et positionner l'une au dessus de l'autre en CSS. Oui, c'est l'idéal ! Encore mieux, écrivez le texte en HTML.
 
-**Mais ça ne conviendra pas si vous avez VRAIMENT besoin que ce soit une image**, par exemple si c'est pour votre Wordpress, pour un carousel...
+**Mais ça ne conviendra pas si vous avez VRAIMENT besoin que ce soit une et une seule image**, par exemple pour votre Wordpress, pour un carousel...
 
 Une fonctionnalité méconnue en SVG vous permet d'insérer une image non-SVG encodée en base64 dans un SVG. Ouvrez votre éditeur de texte et créez un SVG ainsi:
 
@@ -63,7 +63,9 @@ Une fonctionnalité méconnue en SVG vous permet d'insérer une image non-SVG en
 
 Sauvegardez, puis comparez avec vos tests en JPEG. Car le résultat n'est pas toujours meilleur que JPEG. Il dépend de la capacité d'optimisation des deux images prises séparément.
 
-Mais attendez! Vérifiez bien que votre serveur envoie bien les fichiers SVG gzippés. C'est une erreur très fréquente de configuration.
+Mais attendez! Comparez les poids des images en compressant (gzip ou zip) votre SVG. Car à l'inverse de la plupart des autres formats, le SVG est un format non compressé.
+
+D'ailleurs, vérifiez que votre serveur envoie bien les fichiers SVG gzippés. C'est une erreur très fréquente de configuration.
 
 ![check gzip compression](/assets/gzip.png)
 
