@@ -63,7 +63,7 @@ A little known SVG functionnality lets you insert a non-SVG image inside an SVG,
 
 Then compare with JPEG encoding test files. The result file is not always smaller than JPEG. It will depend on the optimization capacity of both JPEG and PNG files separately.
 
-But wait! Compare the weights after compressing your SVG (with zip or gzip). Unlike the other image formats, SVG is an uncompressed format.
+But wait! **Compare the weights after compressing your SVG** (with gzip or zip). Unlike the other image formats, SVG is an uncompressed format.
 
 Make sure your server correctly serves your SVG files gzipped. That’s a very common configuration mistake. Gzip is what will prevent base64 encoding to make performance implications.
 

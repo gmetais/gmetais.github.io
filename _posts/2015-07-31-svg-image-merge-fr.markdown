@@ -63,7 +63,7 @@ Une fonctionnalité méconnue en SVG permet d'insérer une image non-SVG encodé
 
 Sauvegarde, puis compare avec tes tests en JPEG. Car le résultat n'est pas toujours meilleur que JPEG. Il dépend de la capacité d'optimisation des deux images prises séparément.
 
-Mais attends! Compare les poids des images en compressant (gzip ou zip) ton SVG. Car à l'inverse de la plupart des autres formats, le SVG est un format non compressé.
+Mais attends! **Compare les poids des images en compressant ton svg** (gzip ou zip). Car à l'inverse de la plupart des autres formats, le SVG est un format non compressé.
 
 D'ailleurs, vérifie que ton serveur envoie bien les fichiers SVG gzippés. C'est une erreur très fréquente de configuration.
 
