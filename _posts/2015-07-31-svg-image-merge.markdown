@@ -26,9 +26,9 @@ You try as a PNG: the quality is perfect, but it’s even bigger than the origin
 
 --
 
-| JPEG 100%                        | 511KB    |
-| PNG                              | 587KB    |
-| **JPEG 90%**                     | **84KB** |
+| JPEG 100%:                        | 511KB    |
+| PNG:                              | 587KB    |
+| **JPEG 90%:**                     | **84KB** |
 
 --
 
@@ -71,10 +71,10 @@ But wait! Make sure your server correctly serves your SVG files gzipped. That’
 
 --
 
-| JPEG background 65% alone        | 32KB     |
-| PNG text alone                   | 17KB     |
-| Result SVG                       | 64KB     |
-| **Result SVG gzipped**           | **47KB** |
+| JPEG background 65% alone:        | 32KB     |
+| PNG text alone:                   | 17KB     |
+| Result SVG:                       | 64KB     |
+| **Result SVG gzipped:**           | **47KB** |
 
 --
 
