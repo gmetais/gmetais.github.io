@@ -99,9 +99,9 @@ Sorry my old IE8 friend, you're not able to understand SVG images...
 [Here][svg-image-merge] is a command line tool I wrote, that will do the technical part for you: base64 encode the files and inject them into the SVG.
 
 
------
+--
 
-*Special thanks to <a target="_blank" href="https://twitter.com/sarasoueidan">Sara Soueidan</a> — Front-end and SVG Guru — for reviewing this article.*
+*Special thanks to <a target="_blank" href="https://twitter.com/sarasoueidan">Sara Soueidan</a> — Front-end and SVG expert — for reviewing this article.*
 
 
 [svg-image-merge]:      https://github.com/gmetais/svg-image-merge
