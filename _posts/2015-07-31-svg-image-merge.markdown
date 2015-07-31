@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Use SVG to optimize non-vectorial images"
+title:  "Use SVG to optimize non-vector images"
 date:   2015-07-31 12:17:00
 categories: image-optim
 excerpt: An optimization technic for image optimization freaks
@@ -48,9 +48,9 @@ Save the text as a PNG with a transparent background and optimize it losslessly 
 
 ### ... and use SVG to stick them into a single image file
 
-You will argue, you could insert these two images in HTML and position them on top of each other. Yes, definitely! Even better, write the text in HTML directly!
+You will argue, you could insert these two images in HTML and position them on top of each other. Yes, definitely! Even better, write the text in HTML directly if you can!
 
-**But what if you REALLY need a single image file**, like if it needs to be inserted in your Wordpress, in a carousel, in any template that does not allow what you want?
+**But what if you REALLY need a single image file**, like if it needs to be inserted in your Wordpress, in a carousel, in any template that does not allow anything but an image? Or maybe you simply want to keep the semantics of a single real image in your markup.
 
 A little known SVG functionnality lets you insert a non-SVG image inside an SVG, base64 encoded. Use your text editor and create an SVG file like this:
 
@@ -83,8 +83,10 @@ Make sure your server correctly serves your SVG files gzipped. That’s a very c
 
 --
 
+As you can see, base64 encoding is not a problem: the gzipped SVG is even smaller than the sum of the JPEG and the PNG.
 
 *The text could also be directly written with SVG. Of course, in this case, don't base64 encode it.*
+
 
 
 ### Browser compatibility
@@ -96,6 +98,10 @@ Sorry my old IE8 friend, you're not able to understand SVG images...
 
 [Here][svg-image-merge] is a command line tool I wrote, that will do the technical part for you: base64 encode the files and inject them into the SVG.
 
+
+-----
+
+> Special thanks to <a target="_blank" href="https://twitter.com/sarasoueidan">Sara Soueidan</a> — Front-end and SVG Guru — for reviewing this article.
 
 
 [svg-image-merge]:      https://github.com/gmetais/svg-image-merge

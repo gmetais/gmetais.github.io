@@ -50,7 +50,7 @@ Enregistrez le texte en PNG et optimisez-le avec un outil d'optimisation sans pe
 
 Vous allez me dire que pourriez insérer ces deux images dans l'HTML et positionner l'une au dessus de l'autre en CSS. Oui, c'est l'idéal ! Encore mieux, écrivez le texte en HTML.
 
-**Mais ça ne conviendra pas si vous avez VRAIMENT besoin que ce soit une et une seule image**, par exemple pour votre Wordpress, pour un carousel...
+**Mais ça ne conviendra pas si vous avez VRAIMENT besoin que ce soit une et une seule image**, par exemple pour votre Wordpress, pour un carousel... Vous pouvez aussi avoir envie de garder une seule balise image dans l'HTML pour des raisons de sémantique.
 
 Une fonctionnalité méconnue en SVG vous permet d'insérer une image non-SVG encodée en base64 dans un SVG. Ouvrez votre éditeur de texte et créez un SVG ainsi:
 
@@ -83,6 +83,8 @@ D'ailleurs, vérifiez que votre serveur envoie bien les fichiers SVG gzippés. C
 
 --
 
+Comme vous pouvez le voir, l'encodage en base64 n'est pas un problme : le fichier SVG gzippé est même plus petit que la somme des deux fichiers JPEG et PNG.
+
 *Le texte pourrait même être directement écrit en SVG. Mais bien sûr, dans ce cas, ne l'encodez pas en base64.*
 
 
@@ -95,6 +97,10 @@ Désolé mon vieux IE8, tu n'es pas capable de comprendre le SVG...
 
 J'ai créé [cet outil][svg-image-merge] en ligne de commande, qui fera pour vous la partie technique : encodage en base64 des images et injection dans le SVG.
 
+
+-----
+
+> Remerciements particuliers à <a target="_blank" href="https://twitter.com/sarasoueidan">Sara Soueidan</a> — Guru du front-end et du SVG — pour la relecture de cet article.
 
 
 [svg-image-merge]:      https://github.com/gmetais/svg-image-merge
