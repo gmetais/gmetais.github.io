@@ -7,7 +7,7 @@ excerpt: une technique pour les tarés de l'optimisation
 comments: true
 ---
 
-*Une technique pour les tarés de l'optimisation*
+*Une technique pour les tarés de l'optimisation.*
 
 
 Mettons-nous en situation. Ce matin, vous devez ajouter à un site web une image qui contient à la fois une photographie et du texte. Facile à faire avec votre éditeur d'image préféré.
@@ -18,7 +18,7 @@ Et voilà !
 
 Vous la sauvegardez en JPEG et regardez la taille sur votre disque : **511Ko!**
 
-Il est temps de l'optimiser. Et là commencent les problèmes... Si vous optimisez l'image en JPEG en dessous de la qualité 80%, vous parvenez à avoir un poids léger, mais la qualité du texte en souffre. Des approximations et des artefacts sont ajoutés par l'algorithme de compression. C'est dommage, parce que votre photographie d'arrière-plan est toujours bien même avec une compression à 65%...
+Il est temps de l'optimiser. Et là commencent les problèmes... Si vous optimisez l'image en JPEG en dessous de la qualité 80%, vous parvenez à avoir un poids léger, mais la qualité du texte en souffre. Des approximations et des artefacts sont ajoutés par l'algorithme de compression. C'est dommage, parce que votre photographie d'arrière-plan, elle, est toujours bien même avec une compression à 65%...
 
 ![JPEG encoding artefacts](/assets/not-so-sharp.png)
 
@@ -52,7 +52,7 @@ Vous allez me dire que pourriez insérer ces deux images dans l'HTML et position
 
 **Mais ça ne conviendra pas si vous avez VRAIMENT besoin que ce soit une image**, par exemple si c'est pour votre Wordpress, pour un carousel...
 
-Ouvrez votre éditeur de texte et créez un SVG ainsi:
+Une fonctionnalité méconnue en SVG vous permet d'insérer une image non-SVG encodée en base64 dans un SVG. Ouvrez votre éditeur de texte et créez un SVG ainsi:
 
 ```xml
 <svg width="800" height="600">

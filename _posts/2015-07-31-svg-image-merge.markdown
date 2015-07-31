@@ -3,11 +3,11 @@ layout: post
 title:  "Use SVG to optimize non-vectorial images"
 date:   2015-07-31 12:17:00
 categories: image-optim
-excerpt: for image optimization freaks
+excerpt: an optimization technic for image optimization freaks
 comments: true
 ---
 
-*An optimization technic for image optimization freaks*
+*An optimization technic for image optimization freaks.*
 
 
 This morning, you need to add to some website an image that contains both a photography and text. Pretty easy to do with your favorite image editor.
@@ -52,7 +52,7 @@ You will argue, you could insert these two images in HTML and position them on t
 
 **But what if you REALLY need a single image file**, like if it needs to be inserted in your Wordpress, in a carousel, in any template that does not allow what you want?
 
-Use your text editor to create an SVG file like this:
+A little known SVG functionnality lets you insert a non-SVG image inside an SVG, base64 encoded. Use your text editor and create an SVG file like this:
 
 ```xml
 <svg width="800" height="600">
@@ -63,7 +63,7 @@ Use your text editor to create an SVG file like this:
 
 Then compare with JPEG encoding test files. The result file is not always smaller than JPEG. It will depend on the optimization capacity of both JPEG and PNG files separately.
 
-But wait! Make sure your server correctly serves your SVG files gzipped. That’s a very common configuration mistake.
+But wait! Make sure your server correctly serves your SVG files gzipped. That’s a very common configuration mistake. Gzip is what will prevent base64 encoding to make performance implications.
 
 ![check gzip compression](/assets/gzip.png)
 
