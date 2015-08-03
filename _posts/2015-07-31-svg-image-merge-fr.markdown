@@ -72,6 +72,8 @@ D'ailleurs, vérifie que ton serveur envoie bien les fichiers SVG gzippés. C'es
 
 ### Resultat
 
+(Voir le chapitre compatibilité navigateur plus bas si le résultat ne s'affiche pas dans votre navigateur)
+
 ![result svg file](/assets/result.svg)
 
 --
@@ -90,7 +92,7 @@ Comme tu peux le voir, l'encodage en base64 n'est pas un problme : le fichier SV
 
 ### Compatibilité navigateur
 
-**Attention !** Safari ne gère pas les images en base64 encodés dans des SVG, si le SVG est chargé en `<img>`. Ça fonctionne en `<object>`. Si quelqu'un peut tester avec Safari 9, ça m'intéresse.
+**Attention !** Safari 8 ne gère pas les images en base64 encodés dans des SVG, si le SVG est chargé en `<img>`. Ça fonctionne en `<object>. Ce problème est corrigé dans Safari 9.
 
 Quant à IE8, il n'est pas capable de lire le SVG du tout.
 

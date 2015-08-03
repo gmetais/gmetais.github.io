@@ -72,6 +72,8 @@ Make sure your server correctly serves your SVG files gzipped. That’s a very c
 
 ### Result
 
+(See browser compatibility below if your browser doesn't display the image)
+
 ![result svg file](/assets/result.svg)
 
 --
@@ -91,9 +93,9 @@ As you can see, base64 encoding is not a problem: the gzipped SVG is even smalle
 
 ### Browser compatibility
 
-**Be careful!** Safari 8 is not able to display base64 encoded images inside an SVG if the SVG is loaded via `<img>`. It's working correctly with an `<object>` tag. It seems to be corrected in Safari 9, if anyone can test and tell me.
+**Be careful!** Safari 8 is not able to display base64 encoded images inside an SVG if the SVG is loaded via `<img>`. It's working correctly with an `<object>` tag. It is fixed in Safari 9.
 
-Sorry my old IE8 friend, you're not able to understand SVG images...
+IE8 is not able to understand SVG images at all.
 
 
 ### I started a small tool
