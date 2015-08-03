@@ -90,7 +90,9 @@ Comme tu peux le voir, l'encodage en base64 n'est pas un problme : le fichier SV
 
 ### Compatibilité navigateur
 
-Désolé, pauvre vieux IE8, tu n'es pas capable de comprendre le SVG...
+**Attention !** Safari ne gère pas les images en base64 encodés dans des SVG, si le SVG est chargé en `<img>`. Ça fonctionne en `<object>`. Si quelqu'un peut tester avec Safari 9, ça m'intéresse.
+
+Quant à IE8, il n'est pas capable de lire le SVG du tout.
 
 
 ### Un petit outil pour simplifier cela

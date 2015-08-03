@@ -91,6 +91,8 @@ As you can see, base64 encoding is not a problem: the gzipped SVG is even smalle
 
 ### Browser compatibility
 
+**Be careful!** Safari 8 is not able to display base64 encoded images inside an SVG if the SVG is loaded via `<img>`. It's working correctly with an `<object>` tag. It seems to be corrected in Safari 9, if anyone can test and tell me.
+
 Sorry my old IE8 friend, you're not able to understand SVG images...
 
 
