@@ -7,13 +7,13 @@ excerpt: How to build a good lazyloader in 2016
 comments: true
 ---
 
-*What I expect from a modern image lazyloader*
+*How to build a good lazyloader in 2016*
 
 Using a lazyloader is a great way to improve the loading spead of a page. However, during my webperf audits, I've seen some lazyloaders that were causing more problems than improvements. I'm also sad to see some massively used lazyloaders not evolving and not implementing new technologies.
 
 I could create "the-lazyloader-of-my-dreams.js", but 1) I don't have time and 2) it wouldn't fix the other lazyloaders.
 
-So here is my wish list for lazyloaders maintainers:
+## My wish list for lazyloaders maintainers
 
 1. Can be loaded as an async script. 
 2. Doesn't wait until end of body, DOM Ready of Window.onload to load images.
@@ -31,10 +31,10 @@ So here is my wish list for lazyloaders maintainers:
 14. Alerts developers about specifying dimensions, to avoid reflows.
 
 
-Here is a benchmark for some existing lazyloaders: 
+## Benchmark of some existing lazyloaders 
 
 |                        | [aFarkas/lazysizes][1] | [vvo/lazyload][2] | [tuupola/jquery_lazyload][3] | [verlok/lazyload][4]
-|------------------------|---|---|---|---|
+|------------------------|:-:|:-:|:-:|:-:|
 | 1 - async              | ✔ | ✗ | ✔ | ✔ |
 | 2 - doesn't wait       | ✗ | ✔ | ✗ | ✗ |
 | 3 - visibility         | ✔ | ✔ | ✔ | ✔ |
@@ -49,8 +49,9 @@ Here is a benchmark for some existing lazyloaders:
 | 12 - interaction       | ✗ | ✗ | ✗ | ✗ |
 | 13 - preconnect        | ✗ | ✗ | ✗ | ✗ |
 | 14 - dimensions        | ✔ | ✗ | ✔ | ✔ |
-| **SCORE**              | 9/14 | 5/14 | 5/14 | 7/14 |
+| SCORE                  | 9/14 | 5/14 | 5/14 | 7/14 |
 
+---
 
 (You can create an issue or a pull request on [gmetais/gmetais.github.io][github-blog] if I made a mistake, if the benchmark needs an update or if you'd like to see a script added.)
 
