@@ -4,11 +4,11 @@ title: About me
 permalink: /about/
 ---
 
-I'm Gaël Métais and i work in web performances.
-===============================================
+I'm Gaël Métais and I try to help speeding up the web.
+======================================================
 
 This is my blog about Web Performances and Front-End technologies or tools.
-If you understand French, you can visit my website here: [gaelmetais.com][gaelmetais.com].
+You can visit my website here: [gaelmetais.com][gaelmetais.com].
 
 
-[gaelmetais.com]:   http://www.gaelmetais.com
+[gaelmetais.com]:   https://www.gaelmetais.com
