@@ -52,9 +52,9 @@ I could create "the-lazyloader-of-my-dreams.js", but 1) I don't have time and 2)
 | SCORE                  | 9/14 | 5/14 | 5/14 | 7/14 |
 |------------------------|---|---|---|---|
 
-<br><br>
+<br>
 ---
-<br><br>
+<br>
 
 
 (You can create an issue or a pull request on [gmetais/gmetais.github.io][github-blog] if I made a mistake, if the benchmark needs an update or if you'd like to see a script added.)
