@@ -49,7 +49,7 @@ Here is a benchmark for some existing lazyloaders:
 | 12 - interaction       | ✗ | ✗ | ✗ | ✗ |
 | 13 - preconnect        | ✗ | ✗ | ✗ | ✗ |
 | 14 - dimensions        | ✔ | ✗ | ✔ | ✔ |
-| **SCORE**              | 9/14 | 5/14 | 4/14 | 
+| **SCORE**              | 9/14 | 5/14 | 5/14 | 7/14 |
 
 
 (You can create an issue or a pull request on [gmetais/gmetais.github.io][github-blog] if I made a mistake, if the benchmark needs an update or if you'd like to see a script added.)
