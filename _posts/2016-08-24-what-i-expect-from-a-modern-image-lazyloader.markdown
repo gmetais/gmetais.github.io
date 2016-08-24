@@ -19,16 +19,17 @@ I could create "the-lazyloader-of-my-dreams.js", but 1) I don't have time and 2)
 2. Doesn't wait until end of body, DOM Ready of Window.onload to load images.
 3. Shows image while loading, for progressive JPEG support.
 4. Detects visibility.
-5. Is compatible with iframes, videos, JS widgets...
-6. Is compatible with background images (and media queries).
-7. Is compatible with srcset or <picture> to load responsive images.
-8. Detects if previous images were loaded too slowly and loads lower resolution images for the next images.
-9. Uses a single scroll event listener instead of one per image.
-10. Throttles the scroll event.
-11. Uses a [Passive Event Listener][passive-event-listener].
-12. Is compatible with the [Interaction Observer API][interaction-observer].
-13. Detects cross-domains in URLs and [preconnect][preconnect] them asap.
-14. Alerts developers about specifying dimensions, to avoid reflows.
+5. Is compatible with iframes
+6. Is compatible with divs or JS widgets
+7. Is compatible with background images (and media queries).
+8. Is compatible with srcset or <picture> to load responsive images.
+9. Detects if previous images were loaded too slowly and loads lower resolution images for the next images.
+10. Uses a single scroll event listener instead of one per image.
+11. Throttles the scroll event.
+12. Uses a [Passive Event Listener][passive-event-listener].
+13. Is compatible with the [Interaction Observer API][interaction-observer].
+14. Detects cross-domains in URLs and [preconnect][preconnect] them asap.
+15. Alerts developers about specifying dimensions, to avoid reflows.
 
 
 ## Benchmark of some existing lazyloaders 
@@ -39,17 +40,18 @@ I could create "the-lazyloader-of-my-dreams.js", but 1) I don't have time and 2)
 | 2 - doesn't wait       | ✗ | ✔ | ✗ | ✗ |
 | 3 - visibility         | ✔ | ✔ | ✔ | ✔ |
 | 4 - progressive        | ✔ | ✔ | ✗ | ✔ |
-| 5 - iframes, etc       | ✔ | ✗ | ✗ | ✔ |
-| 6 - background         | ✔ | ✗ | ✔ | ✔ |
-| 7 - srcset, picture    | ✔ | ✗ | ✗ | ✔ |
-| 8 - detect slowness    | ✗ | ✗ | ✗ | ✗ |
-| 9 - single listener    | ✔ | ✔ | ✔ | ✔ |
-| 10 - throttling        | ✔ | ✔ | ✗ | ✔ |
-| 11 - passive event     | ✗ | ✗ | ✗ | ✗ |
-| 12 - interaction       | ✗ | ✗ | ✗ | ✗ |
-| 13 - preconnect        | ✗ | ✗ | ✗ | ✗ |
-| 14 - dimensions        | ✔ | ✗ | ✔ | ✔ |
-| SCORE:                 | 9/14 | 5/14 | 5/14 | 9/14 |
+| 5 - iframes            | ✔ | ✗ | ✗ | ✔ |
+| 6 - divs               | ✔ | ✗ | ✗ | ✗ |
+| 7 - background         | ✔ | ✗ | ✔ | ✔ |
+| 8 - srcset, picture    | ✔ | ✗ | ✗ | ✔ |
+| 9 - detect slowness    | ✗ | ✗ | ✗ | ✗ |
+| 10 - single listener   | ✔ | ✔ | ✔ | ✔ |
+| 11 - throttling        | ✔ | ✔ | ✗ | ✔ |
+| 12 - passive event     | ✗ | ✗ | ✗ | ✗ |
+| 13 - interaction       | ✗ | ✗ | ✗ | ✗ |
+| 14 - preconnect        | ✗ | ✗ | ✗ | ✗ |
+| 15 - dimensions        | ✔ | ✗ | ✔ | ✔ |
+| SCORE:                 | 10/15 | 5/15 | 5/15 | 9/15 |
 | Stars on GitHub        | 5K | 800 | 6K | 500 |
 |------------------------|---|---|---|---|
 
