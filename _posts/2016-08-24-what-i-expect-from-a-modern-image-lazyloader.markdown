@@ -7,7 +7,7 @@ excerpt: How to build a good lazyloader in 2016
 comments: true
 ---
 
-*How to build a good lazyloader in 2016*
+*What should a good lazyloader be in 2016*
 
 Using a lazyloader is a great way to improve the loading spead of a page. However, during my webperf audits, I've seen some lazyloaders that were causing more problems than improvements. I'm also sad to see some massively used lazyloaders not evolving and not implementing new technologies.
 
