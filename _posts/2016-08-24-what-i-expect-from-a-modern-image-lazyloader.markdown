@@ -52,7 +52,7 @@ I could create "the-lazyloader-of-my-dreams.js", but 1) I don't have time and 2)
 | 14 - preconnect        | ✗ | ✗ | ✗ | ✗ |
 | 15 - dimensions        | ✔ | ✗ | ✔ | ✔ |
 | SCORE:                 | 10/15 | 6/15 | 5/15 | 9/15 |
-| Stars on GitHub        | 5K | 800 | 6K | 500 |
+| Stars on GitHub:       | 5K | 800 | 6K | 500 |
 |------------------------|---|---|---|---|
 
 <br>
