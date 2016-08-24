@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What I expect from a modern image lazyloader"
-date:   2016-08-13 16:03:50
+date:   2016-08-24 15:03:50
 categories: webperf
 excerpt: How to build a good lazyloader in 2016
 comments: true
@@ -39,8 +39,8 @@ I could create "the-lazyloader-of-my-dreams.js", but 1) I don't have time and 2)
 | 2 - doesn't wait       | ✗ | ✔ | ✗ | ✗ |
 | 3 - visibility         | ✔ | ✔ | ✔ | ✔ |
 | 4 - progressive        | ✔ | ✔ | ✗ | ✔ |
-| 5 - iframes, etc       | ✔ | ✗ | ✗ | ✗ |
-| 6 - background         | ✔ | ✗ | ✔ | ✗ |
+| 5 - iframes, etc       | ✔ | ✗ | ✗ | ✔ |
+| 6 - background         | ✔ | ✗ | ✔ | ✔ |
 | 7 - srcset, picture    | ✔ | ✗ | ✗ | ✔ |
 | 8 - detect slowness    | ✗ | ✗ | ✗ | ✗ |
 | 9 - single listener    | ✔ | ✔ | ✔ | ✔ |
@@ -49,7 +49,8 @@ I could create "the-lazyloader-of-my-dreams.js", but 1) I don't have time and 2)
 | 12 - interaction       | ✗ | ✗ | ✗ | ✗ |
 | 13 - preconnect        | ✗ | ✗ | ✗ | ✗ |
 | 14 - dimensions        | ✔ | ✗ | ✔ | ✔ |
-| SCORE                  | 9/14 | 5/14 | 5/14 | 7/14 |
+| SCORE:                 | 9/14 | 5/14 | 5/14 | 9/14 |
+| Stars on GitHub        | 5K | 800 | 6K | 500 |
 |------------------------|---|---|---|---|
 
 <br>
