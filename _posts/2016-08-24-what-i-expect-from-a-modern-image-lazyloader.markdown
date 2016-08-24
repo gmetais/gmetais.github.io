@@ -40,7 +40,7 @@ I could create "the-lazyloader-of-my-dreams.js", but 1) I don't have time and 2)
 | 2 - doesn't wait       | ✗ | ✔ | ✗ | ✗ |
 | 3 - visibility         | ✔ | ✔ | ✔ | ✔ |
 | 4 - progressive        | ✔ | ✔ | ✗ | ✔ |
-| 5 - iframes            | ✔ | ✗ | ✗ | ✔ |
+| 5 - iframes            | ✔ | ✔ | ✗ | ✔ |
 | 6 - divs               | ✔ | ✗ | ✗ | ✗ |
 | 7 - background         | ✔ | ✗ | ✔ | ✔ |
 | 8 - srcset, picture    | ✔ | ✗ | ✗ | ✔ |
@@ -51,7 +51,7 @@ I could create "the-lazyloader-of-my-dreams.js", but 1) I don't have time and 2)
 | 13 - interaction       | ✗ | ✗ | ✗ | ✗ |
 | 14 - preconnect        | ✗ | ✗ | ✗ | ✗ |
 | 15 - dimensions        | ✔ | ✗ | ✔ | ✔ |
-| SCORE:                 | 10/15 | 5/15 | 5/15 | 9/15 |
+| SCORE:                 | 10/15 | 6/15 | 5/15 | 9/15 |
 | Stars on GitHub        | 5K | 800 | 6K | 500 |
 |------------------------|---|---|---|---|
 
